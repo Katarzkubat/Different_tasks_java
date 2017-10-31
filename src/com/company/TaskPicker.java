@@ -7,6 +7,7 @@ public class TaskPicker {
         Histogram histogram = new Histogram();
         Doubloon doubloon = new Doubloon();
         Palindrome palindrome = new Palindrome();
+        BobbleSorting bobble = new BobbleSorting();
 
         DataCollector dtc = new DataCollector();
 
@@ -17,7 +18,7 @@ public class TaskPicker {
             System.out.println(t.getDescription());
         }
 
-        System.out.println("Choose number from 0 to 4");
+        System.out.println("Choose number from 0 to 5");
         Boolean manualExit = false;
         while (!manualExit && (task = Task.createFromInt(dtc.getInt())) != Task.EXIT) {
             switch (task) {
@@ -39,6 +40,11 @@ public class TaskPicker {
                 case HISTOGRAM:
                     System.out.println("Histogram is chosen.");
                     histogram.createHistogram();
+                    break;
+
+                case BOBBLE_SORTING:
+                    System.out.println("BoobleSorting is chosen.");
+                    bobble.sortBobble();
                     break;
 
                 case EXIT:

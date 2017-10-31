@@ -6,7 +6,8 @@ public enum Task {
     FACTORIAL (1, "1: Task presenting factorial."),
     HISTOGRAM (2, "2: Task presenting histogram."),
     DOUBLOON (3, "3: Task presenting doubloon."),
-    EXIT(4,"4: Exit.");
+    BOBBLE_SORTING (4, "4: Task presenting bobble sorting"),
+    EXIT(5,"5: Exit.");
 
     private int value;
     private String description;
